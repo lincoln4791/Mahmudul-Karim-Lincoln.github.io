@@ -54,3 +54,205 @@ section {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.profile-content {
+  max-width: 600px;
+}
+
+.highlights ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.highlights li {
+  margin: 10px 0;
+}
+
+.contact-details a, .social-media a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.contact-details a:hover, .social-media a:hover {
+  text-decoration: underline;
+}
+
+.social-media p {
+  margin: 0;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.portfolio-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.portfolio-item img.app-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 8px; /* Optional for rounded corners */
+  object-fit: cover;
+}
+
+.portfolio-item span {
+  font-size: 16px;
+  line-height: 1.5; /* Optional for better readability */
+}
+
+.portfolio-item a:hover {
+  text-decoration: underline;
+  color: #007BFF; /* Optional hover effect */
+}
+
+.company-title {
+  color: #646566; /* Example: Set to a blue shade */
+  font-size: 1.5rem; /* Adjust font size if necessary */
+  font-weight: bold; /* Make the text bold */
+  margin-bottom: 10px; /* Add spacing between the title and content */
+}
+
+.styled-list {
+  list-style-type: disc; /* Use a filled circle for bullet points */
+  margin-left: 20px; /* Add indentation for the list */
+  padding-left: 10px; /* Add padding for better spacing */
+}
+
+.styled-list li {
+  margin-bottom: 10px; /* Add space between each list item */
+  font-size: 1rem; /* Adjust font size for readability */
+  line-height: 1.5; /* Increase line height for better spacing */
+}
+.portfolio-item {
+  margin-bottom: 20px;
+}
+
+.app-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.item-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.item-details span {
+  flex: 1;
+  min-width: 200px;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-item {
+  margin-bottom: 20px;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.company-title {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.item-content {
+  margin-left: 60px; /* Aligns content under the title and image */
+}
+
+  /* Flexbox for item layout */
+  .portfolio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .item-header {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* Style for the image */
+  .app-icon {
+    width: 50px; /* adjust size as needed */
+    height: 50px; /* adjust size as needed */
+    margin-right: 20px;
+  }
+
+  /* Container for the title and content */
+  .title-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Style for the title and content */
+  .item-content {
+    margin-top: 10px;
+  }
+
+  .item-content p {
+    margin: 5px 0;
+  }
+
+  /* Additional styling for the overall section */
+  .company-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+
+
+

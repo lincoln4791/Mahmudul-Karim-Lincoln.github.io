@@ -15,18 +15,188 @@
     <a href="skills.html">Skills</a>
     <a href="education.html">Education</a>
     <a href="career-summary.html">Career</a>
-    <a href="employment.html">Employment</a>
     <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
   </nav>
   <section>
-    <div class="about-section">
-      <img src="pro_pic_cv.jpg" alt="Profile Picture of Mohammad Mahmudul Karim" class="profile-image">
-      <p>
-        I am Mohammad Mahmudul Karim, a passionate Android Developer with 5+ years of experience in healthcare, e-commerce, and other domains.
-        I specialize in creating robust, scalable applications using Kotlin, Java, and Flutter.
-      </p>
-    </div>
+    <section class="container">
+      <!-- Left: Profile Picture -->
+      <div class="profile-section">
+        <img src="profile.jpg" alt="Profile Picture of Mohammad Mahmudul Karim" class="profile-image">
+      </div>
+  
+      <!-- Right: Image Slider -->
+      <div class="slider-section">
+        <div class="slider" id="imageSlider">
+          <img src="slider1.jpg" alt="Photo 1" class="active">
+          <img src="slider2.jpg" alt="Photo 2">
+          <img src="slider3.jpg" alt="Photo 3">
+    
+        </div>
+      </div>
+    </section>
+      <!-- Bottom Content -->
+  <section class="bottom-content">
+    <h2>About Me</h2>
+    <p>
+      I am a Mobile Application Developer with over 5+ years of experience designing, developing, 
+      and delivering high-performance, user-centric mobile applications. My journey in Mobile Application> development 
+      started with a passion for crafting seamless digital experiences, 
+      which has evolved into expertise in building scalable, maintainable, 
+      and feature-rich apps that delight users and meet business goals.
+    </p>
+    <p>
+      I hold a B.Sc in Comupter Science & ENgineering from SOnargaon University, where I gained a solid 
+      foundation in computer science and software engineering. My academic background equipped me with
+      analytical skills and a problem-solving mindset that continue to drive my professional growth.
+    </p>
+
+    <p>
+      Throughout my career, I have contributed to various industries, including POS,OTT,e-commerce, 
+      fintech, and healthcare, delivering apps that have reached 10 million+ users globally. 
+      I have a proven track record of:
+
+      Leading cross-functional teams to deliver projects on time and within budget.
+      Implementing agile methodologies to streamline development and improve collaboration.
+      Mentoring junior developers and fostering a culture of continuous learning and innovation.
+      Beyond development, I am passionate about optimizing app performance, reducing technical debt, and ensuring compliance with the latest Android standards.
+      
+      When I'm not coding, you can find me exploring the latest trends in mobile technology, 
+      contributing to open-source projects, or sharing knowledge at developer meetups and conferences
+    </p>
   </section>
+
+  <section class="bottom-content">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Got Second Runnerup in "Intra University Coding Contest-2016" at Sonargaon University</li>
+      <li>Recognized as Employee of the year in 2022 from CMED Heath Limited </li>
+      <li>Successfully Launced a Personal App that has 300+ regular active users</li>
+    </ul>
+  </section>
+  <section class="bottom-content">
+    <h2>Contact Me</h2>
+    <ul>
+      <li>Email: <a href="mahmuduulkarim@gmail.com">senior.dev@example.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/mahmudul-karim-lincoln-9a2040125/" target="_blank">linkedin.com/in/senior-dev</a></li>
+      <li>GitHub: <a href="https://github.com/lincoln4791" target="_blank">github.com/senior-dev</a></li>
+    </ul>
+  </section>
+
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('#imageSlider img');
+    const totalImages = images.length;
+
+    function updateSlider() {
+      images.forEach((img, index) => {
+        img.classList.remove('active', 'prev');
+        if (index === currentIndex) {
+          img.classList.add('active');
+        } else if (index === (currentIndex - 1 + totalImages) % totalImages) {
+          img.classList.add('prev');
+        }
+      });
+    }
+
+    function startSlider() {
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateSlider();
+      }, 2000); // Change slide every 3 seconds
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateSlider();
+      startSlider();
+    });
+  </script>
+  </section>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .profile-section {
+      flex: 1;
+      max-width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .slider-section {
+      flex: 2;
+      max-width: 500px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      transition: left 1s ease-in-out;
+    }
+
+    .slider img.active {
+      left: 0;
+    }
+
+    .slider img.prev {
+      left: 100%;
+    }
+
+    .bottom-content {
+      width: 100%;
+      text-align: left;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+
+    .bottom-content h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .bottom-content p {
+      font-size: 1em;
+      line-height: 1.5;
+      color: #555;
+    }
+  </style>
+
 </body>
 </html>
